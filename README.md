@@ -84,13 +84,13 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flip/
 ```
 
 #### Response body
 
 ```
-
+{"flip":"tails"}
 ```
 
 #### Response headers
