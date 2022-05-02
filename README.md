@@ -96,7 +96,14 @@ curl http://localhost:5000/app/flip/
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 16
+ETag: W/"10-N9e0DDykqBPnqphc8f4bzHcjsuM"
+Date: Mon, 02 May 2022 11:30:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flips/:number/ (GET)
@@ -116,7 +123,14 @@ curl http://localhost:5000/app/flips/3
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 55
+ETag: W/"37-ZgKkgNG0wvRsMjR2knhtioyjgtc"
+Date: Mon, 02 May 2022 11:31:44 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flip/coin/ (GET)
@@ -156,7 +170,14 @@ curl http://localhost:5000/app/flip/call/tails
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ETag: W/"2f-JOa34pahI0LRWI9nHfi+YGLHNg8"
+Date: Mon, 02 May 2022 11:32:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flip/call/ (POST)
@@ -211,26 +232,6 @@ ETag: W/"11b-9dPTqGfngSPFEOq4loChIlpdSIE"
 Date: Thu, 07 Apr 2022 15:23:35 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
-```
-
-### /app/log/access/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
 ```
 
 ### /app/log/access/ (GET)
