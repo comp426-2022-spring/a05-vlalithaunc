@@ -104,13 +104,13 @@ curl http://localhost:5000/app/flip/
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flips/3
 ```
 
 #### Response body
 
 ```
-
+{"raw":["tails","tails","heads"],"summary":{"tails":2,"heads":1}}
 ```
 
 #### Response headers
@@ -139,18 +139,18 @@ curl http://localhost:5000/app/flip/
 
 ```
 
-### /app/flip/call/:guess/ (GET)
+### /app/flip/call/:guess(heads|tails)/ (GET)
 
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flip/call/tails
 ```
 
 #### Response body
 
 ```
-
+{"call":"tails","flip":"tails","result":"win"}
 ```
 
 #### Response headers
