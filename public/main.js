@@ -50,6 +50,29 @@ async function flipCoins(event) {
 	}
 }
 
+// Guess a flip by clicking either heads or tails button
+const call = document.getElementById("call")
+call.addEventListener("submit", flipCall)
+async function flipCall(event) {
+	event.preventDefault();
+	const endpoint = "app/flip/call/"
+	const url = document.baseURI+endpoint
+	const formEvent = event.currentTarget
+	try {
+		const formData = new FormData(formEvent); 
+		const results = await sendFlips({ url, formData });
+		document.getElementById("choice").innerHTML = "Guess: "+results.call;
+		document.getElementById("actual").innerHTML = "Actual: "+results.flip;
+		document.getElementById("results").innerHTML = "Result: "+results.result;
+    document.getElementById("coingame").innerHTML = '<li><img src="assets/img/'+results.call+'.png" class="bigcoin" id="callcoin"></li><li><img src="assets/img/'+results.flip+'.png" class="bigcoin"></li><li><img src="assets/img/'+results.result+'.png" class="bigcoin"></li>';
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+
+
+
 
 // sends POST request objects from FormData to send to the API using fetch()
 async function sendFlips({ url, formData }) {
@@ -88,4 +111,3 @@ async function sendFlips({ url, formData }) {
 
 // Enter number and press button to activate coin flip series
 
-// Guess a flip by clicking either heads or tails button

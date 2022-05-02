@@ -69,7 +69,25 @@
       </ul>
     </div>
     <div id="guess" class="hidden">
-      
+		<h1>Guess a coin flip</h1>
+		<form id="call">
+		  <label for="side">Select a side of the coin(heads/tails):</label>
+		  <select name="guess" id="guess" form="call">
+			<option value="heads">Heads</option>
+			<option value="tails">Tails</option>
+		  </select>
+		  <input type="submit" value="Flip it!">
+		</form>
+		<h2>Results</h2>
+		<p><span id="choice"><span></p>
+		<p><span id="actual"><span></p>
+		<p><span id="results"><span></p>
+		<ul id="coingame">
+				<li>
+				  <img src="assets/img/coin.png" class="bigcoin"> 
+		  </li>
+		</ul>
+	  </div>
     </div>
 	<script src="main.js"></script>
   </body>
