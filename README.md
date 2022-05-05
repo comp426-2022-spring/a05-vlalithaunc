@@ -84,19 +84,26 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flip/
 ```
 
 #### Response body
 
 ```
-
+{"flip":"tails"}
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 16
+ETag: W/"10-N9e0DDykqBPnqphc8f4bzHcjsuM"
+Date: Mon, 02 May 2022 11:30:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flips/:number/ (GET)
@@ -104,19 +111,26 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flips/3
 ```
 
 #### Response body
 
 ```
-
+{"raw":["tails","tails","heads"],"summary":{"tails":2,"heads":1}}
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 55
+ETag: W/"37-ZgKkgNG0wvRsMjR2knhtioyjgtc"
+Date: Mon, 02 May 2022 11:31:44 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flip/coin/ (GET)
@@ -139,24 +153,31 @@ Keep-Alive: timeout=5
 
 ```
 
-### /app/flip/call/:guess/ (GET)
+### /app/flip/call/:guess(heads|tails)/ (GET)
 
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flip/call/tails
 ```
 
 #### Response body
 
 ```
-
+{"call":"tails","flip":"tails","result":"win"}
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ETag: W/"2f-JOa34pahI0LRWI9nHfi+YGLHNg8"
+Date: Mon, 02 May 2022 11:32:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flip/call/ (POST)
@@ -218,27 +239,7 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/log/access/ (GET)
-
-#### Request cURL
-
-```
-
+curl http://localhost:5000/app/log/access
 ```
 
 #### Response body
